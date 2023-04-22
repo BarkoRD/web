@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgb(205, 205, 205);
+}
+body {
+  background-color: #ccc;
+  margin-top: 50px;
+}
+
+#form {
+  margin: 0 auto;
+  width: 500px;
+  background-color: rgb(12, 19, 30);
+  padding: 30px 0 10px;
+}
+#logForm{
+  transition: .4s;
+  display: none;
+}
+.log_reg_containers {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  column-gap: 130px;
+  margin: 0 auto 50px;
+  width: 80%;
+  overflow: hidden;
+}
+.log_reg_containers span {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: calc(50% + 30px);
+  right: -30px;
+  background-color: blue;
+  transform: skewX(-50deg);
+  transition: 0.6s;
+}
+/* .log_reg_containers .login_button:hover ~ span {
+  right: 200px;
+  background-color: rgb(255, 0, 238);
+}
+.log_reg_containers .register_button:hover ~ span{
+  right: -30px;
+  background-color: rgb(255, 0, 238);
+} */
+/*
+Al hacer hover en el login se trasalade el "span azul" hacia el login
+y se torne rosa SOLO para el hover, Y SI se hace focus en el login se torne azul
+y se quede ahi
+*/
+.log_reg_containers .button {
+  height: 50px;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+input {
+  display: block;
+  color: white;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: rgb(26, 41, 61, 0.6);
+  border: none;
+  border-radius: 1px;
+}
+.input_container {
+  position: relative;
+}
+
+.input {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  padding-top: 15px;
+}
+.input:focus {
+  border: 0.6px solid rgba(41, 79, 137, 0.686);
+  outline: none;
+}
+.input_container label {
+  position: absolute;
+  top: 19px;
+  left: 60px;
+  font-weight: 100;
+  font-size: 13px;
+  opacity: 0.676;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+  top: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(0, 255, 255, 0.582);
+}
+
+.check_container {
+  width: 80%;
+  background-color: rgba(11, 21, 35, 0.75);
+  margin: 20px auto;
+}
+.check_container label {
+  display: inline;
+  font-size: 12px;
+}
+.check_container label a {
+  color: aqua;
+}
+.check {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+#checklabel {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.submit {
+  height: 30px;
+  border-radius: 20px;
+  width: 100px;
+  margin-top: 30px;
+  transition: 0.6s;
+}
+.submit:hover {
+  background-color: aqua;
+  box-shadow: 0 0 3rem aqua;
+}
